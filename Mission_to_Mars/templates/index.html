@@ -7,14 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mission to Mars</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> -->
+  
 </head>
 
 <body>
   <div class="container">
 
     <div class="jumbotron text-center">
-      <h1 id="title">Mission to Mars</h1>
+      <h1>Mission to Mars</h1>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data!!!</a></p>
     </div>
 
@@ -22,12 +22,10 @@
     <h4>{{ mars.news_title }}</h4>
     <p>{{ mars.news_p}}</p>
 
-    <div class="row row-height">
+    <div class="row row1">
         <div class="col-md-8">
             <h3>Feature Mars Image</h3>
-            <div class="w-25">
-              <img src="{{ mars.img }}" alt="Feature Mars Image" weight = "500" height="250">
-            </div>
+            <img src="{{ mars.img }}" alt="Feature Mars Image" weight = "500" height="250">
 
             </div>
         <div class="col-md-4">
@@ -84,7 +82,7 @@
     </div>
     <h3>Mars Hemisphere</h3>
     <hr>
-    <div class="row row-height">
+    <div class="row row2">
       {% for hem in mars.hemisphere %}
       <div class = "col-md-6 text-center">
           <div class="card bg-primary" style="width: 26rem;">
